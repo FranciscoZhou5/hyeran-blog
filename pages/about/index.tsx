@@ -7,3 +7,5 @@ const About: NextPage = () => {
     </div>
   );
 };
+
+export default About;
