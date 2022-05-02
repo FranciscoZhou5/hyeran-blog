@@ -36,7 +36,7 @@ const Home: NextPage<Props, {}> = (props) => {
           <Link passHref href="/about">
             <a className="text-gray duration-200 hover:text-white"> Sobre </a>
           </Link>
-          <Link passHref href="">
+          <Link passHref href="https://github.com/Francisco5g/hyeran-b2">
             <a className="text-gray duration-200 hover:text-white"> Github </a>
           </Link>
         </nav>
