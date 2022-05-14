@@ -5,7 +5,7 @@ import AppHeader from "../../components/AppHeader";
 const About: NextPage = () => {
   return (
     <div>
-      <AppHeader />
+      <div> Olá </div>
     </div>
   );
 };

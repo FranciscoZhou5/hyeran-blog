@@ -2,10 +2,13 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import getPosts from "../../lib/getPosts";
+
+import { BsChevronDown } from "react-icons/bs";
 import AppHeader from "../../components/AppHeader";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 import { Post } from "../../definitions/Post";
-import getPosts from "../../lib/getPosts";
+import Link from "next/link";
 
 interface Props {
   posts: Post[];
@@ -27,7 +30,13 @@ const Post: NextPage<Props, {}> = ({ posts }) => {
         <title> {post?.data?.title} </title>
       </Head>
 
-      <AppHeader />
+      {/* <div className="absolute top-24 xl:left-[396px]">
+        <Link href="/" passHref>
+          <a className="hover:text-white duration-200">
+            <BsChevronDown size={24} className="rotate-90" />
+          </a>
+        </Link>
+      </div> */}
 
       <main className="flex justify-center items-center w-screen">
         <div className="text-left w-screen flex justify-center items-center flex-col">
@@ -41,6 +50,8 @@ const Post: NextPage<Props, {}> = ({ posts }) => {
           </div>
         </div>
       </main>
+
+      <footer></footer>
     </div>
   );
 };

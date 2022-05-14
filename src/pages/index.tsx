@@ -2,13 +2,12 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
-import { BsChevronDown } from "react-icons/bs";
 import getPosts from "../lib/getPosts";
 import { Post } from "../definitions/Post";
 import AppHeader from "../components/AppHeader";
-import { useHeaderContext } from "../context/HeaderContext";
-import Image from "next/image";
+import { convertDateToReadableFormat } from "../lib/convertDateToReadableFormat";
 
 interface Props {
   posts: Post[];
@@ -26,33 +25,11 @@ const Home: NextPage<Props, {}> = (props) => {
     ref?.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
-  function transformDateToStringRepresantation(date: string) {
-    const months = [
-      "Janeiro",
-      "Fevereiro",
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro",
-      "Outubro",
-      "Novembro",
-      "Dezembro",
-    ];
-    const dateObj = new Date(date);
-
-    return `${dateObj.getDate()} de ${months[dateObj.getMonth() + 1]} de ${dateObj.getFullYear()}`;
-  }
-
   return (
     <div className="w-screen flex justify-center flex-col">
       <Head>
         <title> Hyeran blog </title>
       </Head>
-
-      <AppHeader />
 
       <main className="px-3 text-center w-full md:px-48 lg:px-60 xl:px-72 2xl:px-48 flex flex-col items-center">
         <div className="mb-20 xl:mb-32 2xl:mb-60 xl:w-[490px]">
@@ -94,15 +71,15 @@ const Home: NextPage<Props, {}> = (props) => {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-black">{post.data.title}</h3>
+                      <h3 className="text-black group-hover:-translate-y-1 duration-200">{post.data.title}</h3>
 
                       <p className="font-[16px] font-bold">
-                        <span className="group-hover:underline group-hover:text-black duration-200">
+                        <span className="bg-clip-text bg-home-gradient group-hover:text-transparent duration-200">
                           {post.data.author}
                         </span>
                         &ensp;
                         <span className="group-hover:text-black duration-200">
-                          {transformDateToStringRepresantation(post.data.date)}
+                          {convertDateToReadableFormat(post.data.date)}
                         </span>
                       </p>
                     </div>
@@ -113,17 +90,6 @@ const Home: NextPage<Props, {}> = (props) => {
           </div>
         </div>
       </main>
-
-      <footer className="mt-80 mb-8 flex flex-col items-center">
-        <div className="">
-          <span> Criado por </span>
-          <Link passHref href="https://www.instagram.com/zhoufran5gg/">
-            <a target="_blank" className="duration-200 hover:text-white">
-              Japa
-            </a>
-          </Link>
-        </div>
-      </footer>
     </div>
   );
 };
