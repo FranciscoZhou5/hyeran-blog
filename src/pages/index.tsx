@@ -54,11 +54,11 @@ const Home: NextPage<Props, {}> = (props) => {
 
       <AppHeader />
 
-      <main className="pt-8 px-3 text-center w-full md:px-48 lg:px-60 xl:px-72 2xl:px-48 flex flex-col items-center">
+      <main className="px-3 text-center w-full md:px-48 lg:px-60 xl:px-72 2xl:px-48 flex flex-col items-center">
         <div className="mb-20 xl:mb-32 2xl:mb-60 xl:w-[490px]">
           <h1 className="mb-6 md:mb-8 xl:mb-12"> Hyeran Blog </h1>
 
-          <div className="bg-home-gradient py-10 px-16 rounded-md mb-4 md:mb-8 md:py-24 md:px-32 xl:mb-12">
+          <div className="bg-home-gradient py-10 px-16 sm:py-14 rounded-md mb-4 md:mb-8 md:py-24 md:px-32 xl:mb-12">
             <h1> Blog da EM1A </h1>
           </div>
 
@@ -90,6 +90,7 @@ const Home: NextPage<Props, {}> = (props) => {
                         src={post.data.thumb}
                         objectFit="cover"
                         layout="fill"
+                        alt={post.data.key}
                       />
                     </div>
                     <div className="p-6">

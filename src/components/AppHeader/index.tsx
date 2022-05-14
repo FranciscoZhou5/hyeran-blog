@@ -10,7 +10,7 @@ export default function AppHeader() {
 
   return (
     <div>
-      <header className="px-8 md:px-48 lg:px-60 xl:px-72 2xl:px-96 py-6 h-20 flex flex-row items-center justify-between">
+      <header className="px-8 mb-8 md:px-48 lg:px-60 xl:px-72 2xl:px-96 py-6 h-20 flex flex-row items-center justify-between">
         <Link href="/">
           <div className="flex flow-row items-center w-24 h-8 cursor-pointer ">
             <LogoIcon />

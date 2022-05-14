@@ -15,7 +15,11 @@ module.exports = {
     backgroundImage: {
       "home-gradient": "linear-gradient(to right, #12A2E9, #D946EF)",
     },
-    extend: {},
+    extend: {
+      // padding: {
+      //   112: "412px",
+      // },
+    },
   },
   plugins: [],
 };
