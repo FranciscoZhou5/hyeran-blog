@@ -3,6 +3,8 @@ export interface Post {
     title: string;
     author: string;
     key: string;
+    thumb: string;
+    date: string;
   };
   content: string;
 }

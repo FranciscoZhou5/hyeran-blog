@@ -1,6 +1,6 @@
 ---
 title: "Viajar para a europa com diabete"
-date: "18/03/2020"
+date: "03/18/2020"
 author: "Arthur W. Luiz"
 class: "Português"
 about: "Turismo"

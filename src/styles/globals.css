@@ -9,7 +9,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  @apply bg-black text-white text-base;
+  @apply bg-black text-white text-base overflow-x-hidden;
 }
 
 a {
@@ -23,6 +23,14 @@ a, span, p, input {
 
 h1 {
   @apply text-white text-lg font-bold;
+}
+
+h2 {
+  @apply text-white text-md font-bold;
+}
+
+h3 {
+  @apply text-white text-[20px] font-bold;
 }
 
 * {

@@ -3,7 +3,7 @@ import { resolve } from "path";
 import matter from "gray-matter";
 
 export default function getPosts() {
-  const postDir = resolve(process.cwd(), "posts");
+  const postDir = resolve(process.cwd(), "src", "posts");
   const posts = fs.readdirSync(postDir);
 
   return posts.map((post) => {
