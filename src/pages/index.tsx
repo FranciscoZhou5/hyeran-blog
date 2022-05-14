@@ -6,7 +6,6 @@ import Image from "next/image";
 
 import getPosts from "../lib/getPosts";
 import { Post } from "../definitions/Post";
-import AppHeader from "../components/AppHeader";
 import { convertDateToReadableFormat } from "../lib/convertDateToReadableFormat";
 
 interface Props {

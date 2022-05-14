@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Dispatch, SetStateAction, useContext, useState } from "react";
 
 import LogoIcon from "../Icons/Logo";
 import { BsChevronDown } from "react-icons/bs";
-import { HeaderContext, useHeaderContext } from "../../context/HeaderContext";
+import { useHeaderContext } from "../../context/HeaderContext";
 
 export default function AppHeader() {
   const { openDropdownMenu, setOpenDropdownMenu } = useHeaderContext();
