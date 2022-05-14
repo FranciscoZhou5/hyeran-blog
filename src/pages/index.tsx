@@ -71,9 +71,11 @@ const Home: NextPage<Props, {}> = (props) => {
           </button>
         </div>
 
-        <div ref={ref} className="w-full px-4 md:px-0 xl:w-[700px]">
+        <div className="w-full px-4 md:px-0 xl:w-[700px]">
           <div className="text-left flex flex-col items-center">
-            <h1 className="xl:w-[490px]"> Posts </h1>
+            <h1 className="xl:w-[490px]" ref={ref}>
+              Posts
+            </h1>
 
             <div className="md:w-[650px] xl:w-[700px] pt-4 flex flex-col md:flex-row justify-between">
               {posts.map((post) => (
