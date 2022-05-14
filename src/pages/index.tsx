@@ -73,9 +73,12 @@ const Home: NextPage<Props, {}> = (props) => {
 
         <div className="w-full px-4 md:px-0 xl:w-[700px]">
           <div className="text-left flex flex-col items-center">
-            <h1 className="xl:w-[490px]" ref={ref}>
-              Posts
-            </h1>
+            <div className="xl:w-[490px] text-center md:text-left">
+              <h1 className="" ref={ref}>
+                Posts
+              </h1>
+              <p> Clique em um post abaixo! </p>
+            </div>
 
             <div className="md:w-[650px] xl:w-[700px] pt-4 flex flex-col md:flex-row justify-between">
               {posts.map((post) => (
@@ -93,7 +96,13 @@ const Home: NextPage<Props, {}> = (props) => {
                       <h3 className="text-black">{post.data.title}</h3>
 
                       <p className="font-[16px] font-bold">
-                        {post.data.author} &ensp; {transformDateToStringRepresantation(post.data.date)}
+                        <span className="group-hover:underline group-hover:text-black duration-200">
+                          {post.data.author}
+                        </span>
+                        &ensp;
+                        <span className="group-hover:text-black duration-200">
+                          {transformDateToStringRepresantation(post.data.date)}
+                        </span>
                       </p>
                     </div>
                   </a>
@@ -104,7 +113,16 @@ const Home: NextPage<Props, {}> = (props) => {
         </div>
       </main>
 
-      <footer className="h-96 w-10"></footer>
+      <footer className="mt-80 mb-8 flex flex-col items-center">
+        <div className="">
+          <span> Criado por </span>
+          <Link passHref href="https://www.instagram.com/zhoufran5gg/">
+            <a target="_blank" className="duration-200 hover:text-white">
+              Japa
+            </a>
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };
