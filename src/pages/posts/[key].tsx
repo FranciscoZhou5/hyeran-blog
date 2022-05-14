@@ -30,13 +30,13 @@ const Post: NextPage<Props, {}> = ({ posts }) => {
       <AppHeader />
 
       <main className="flex justify-center items-center w-screen">
-        <div className="text-left w-screen">
+        <div className="text-left w-screen flex justify-center items-center flex-col">
           <h1 className="text-md px-3">{post?.data?.title}</h1>
           <div className="px-2">
             <p className="text-[16px]"> {post?.data?.author} </p>
           </div>
 
-          <div className="pt-8 w-screen sm:flex sm:justify-center flex-col">
+          <div className="pt-8 w-screen flex justify-center items-center flex-col">
             <MarkdownRenderer content={post?.content} />
           </div>
         </div>
