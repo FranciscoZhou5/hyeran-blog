@@ -29,7 +29,7 @@ const rendererComponents: Partial<Omit<NormalComponents, keyof SpecialComponents
 export default function MarkdownRenderer({ content }: Props) {
   return (
     <>
-      <ReactMarkdown components={rendererComponents} children={content} />
+      <ReactMarkdown components={rendererComponents}>{content}</ReactMarkdown>
     </>
   );
 }
