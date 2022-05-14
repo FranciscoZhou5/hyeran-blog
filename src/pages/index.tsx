@@ -72,7 +72,7 @@ const Home: NextPage<Props, {}> = (props) => {
                     <div className="p-6">
                       <h3 className="text-black group-hover:-translate-y-1 duration-200">{post.data.title}</h3>
 
-                      <p className="font-[16px] font-bold">
+                      <p className="font-[15px] font-bold">
                         <span className="bg-clip-text bg-home-gradient group-hover:text-transparent duration-200">
                           {post.data.author}
                         </span>
