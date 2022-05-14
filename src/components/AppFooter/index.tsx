@@ -7,7 +7,7 @@ export default function AppFooter() {
         <span> Criado por </span>
         <Link passHref href="https://www.instagram.com/zhoufran5gg/">
           <a target="_blank" className="duration-200 hover:text-white">
-            Japa
+            Francisco5g
           </a>
         </Link>
       </div>
