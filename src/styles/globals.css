@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-white;
+  }
+
+  h1 {
+    @apply text-lg;
+  }
+  
+  h2 {
+    @apply text-md;
+  }
+  
+  h3 {
+    @apply text-[20px];
+  }
+  
+  h4 {
+    @apply text-[18px]
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a, span, p, input {
+    @apply text-gray;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -12,26 +43,7 @@ body {
   @apply bg-black text-white text-base overflow-x-hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-a, span, p, input {
-  @apply text-gray;
-}
-
-h1 {
-  @apply text-white text-lg font-bold;
-}
-
-h2 {
-  @apply text-white text-md font-bold;
-}
-
-h3 {
-  @apply text-white text-[20px] font-bold;
-}
 
 * {
   box-sizing: border-box;

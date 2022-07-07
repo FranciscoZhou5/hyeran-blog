@@ -7,6 +7,7 @@ module.exports = {
       white: "#FFFFFF",
       gray: "#999999",
       transparent: "transparent",
+      blue: "#12A2E9",
     },
     fontSize: {
       base: "14px",
