@@ -21,7 +21,7 @@ const Home: NextPage<Props, {}> = (props) => {
   }, [props.posts]);
 
   function scrollToPosts() {
-    ref?.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   return (
@@ -50,9 +50,7 @@ const Home: NextPage<Props, {}> = (props) => {
         <div className="w-full px-4 md:px-0 xl:w-[700px]">
           <div className="text-left flex flex-col items-center">
             <div className="xl:w-[490px] text-center md:text-left">
-              <h1 className="" ref={ref}>
-                Posts
-              </h1>
+              <h1 ref={ref}>Posts</h1>
               <p> Clique em um post abaixo! </p>
             </div>
 
