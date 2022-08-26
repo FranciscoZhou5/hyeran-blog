@@ -1,23 +1,22 @@
 import Link from "next/link";
-
 import LogoIcon from "../Icons/Logo";
 import { BsChevronDown } from "react-icons/bs";
-import { useHeaderContext } from "../../context/HeaderContext";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function AppHeader() {
-  const { openDropdownMenu, setOpenDropdownMenu } = useHeaderContext();
+  const [openDropdownMenu, setOpenDropdownMenu] = useState(false);
   const router = useRouter();
 
   const links = [
     {
       title: "Home",
-      href: "/",
+      href: "/app/blog",
       newTab: false,
     },
     {
       title: "Sobre",
-      href: "/about",
+      href: "/app/about",
       newTab: false,
     },
     {
@@ -30,7 +29,7 @@ export default function AppHeader() {
   return (
     <>
       <header className="px-8 md:mb-8 md:px-48 lg:px-60 xl:px-72 2xl:px-96 py-6 h-20 flex flex-row items-center justify-between">
-        <Link href="/" passHref>
+        <Link href="/app/blog" passHref>
           <a>
             <div className="flex flow-row items-center w-24 h-8 cursor-pointer ">
               <LogoIcon />
@@ -59,15 +58,15 @@ export default function AppHeader() {
         </div>
       </header>
 
-      <div className={`h-40 w-64 z-10 flex flex-col justify-center px-10 ${!openDropdownMenu && "hidden"}`}>
+      <nav className={`h-40 z-10 flex flex-col justify-center px-10 text-center ${!openDropdownMenu && "hidden"}`}>
         {links.map((link) => (
-          <div key={link.title}>
+          <div key={link.title} className="my-1">
             <Link href={link.href} passHref>
               <a className="text-[16px] text-white underline"> {link.title} </a>
             </Link>
           </div>
         ))}
-      </div>
+      </nav>
     </>
   );
 }

@@ -17,7 +17,7 @@ const rendererComponents: Partial<Omit<NormalComponents, keyof SpecialComponents
 
       return (
         <div className="relative w-screen sm:w-[442px] md:w-[468px] md:h-72 h-56 xl:w-[768px] xl:h-96">
-          <Image src={src} objectFit="cover" layout="fill" alt={alt} />
+          <Image src={src} objectFit="cover" layout="fill" alt={alt} priority />
         </div>
       );
     }
