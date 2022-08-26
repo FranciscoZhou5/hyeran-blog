@@ -52,7 +52,7 @@ const Home: NextPage<Props, {}> = (props) => {
 
         <Posts posts={posts} titleRef={postsTitleRef} />
 
-        <section className="w-full mt-8 md:mt-32 px-4 md:px-0 xl:w-[700px]">
+        {/* <section className="w-full mt-8 md:mt-32 px-4 md:px-0 xl:w-[700px]">
           <div className="text-left flex flex-col items-center justify-center">
             <div className="xl:w-[490px] text-center md:text-left">
               <h1>Galeria</h1>
@@ -66,7 +66,7 @@ const Home: NextPage<Props, {}> = (props) => {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
