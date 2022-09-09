@@ -31,9 +31,9 @@ export default function AppHeader() {
       <header className="px-8 md:mb-8 md:px-48 lg:px-60 xl:px-72 2xl:px-96 py-6 h-20 flex flex-row items-center justify-between">
         <Link href="/app/blog" passHref>
           <a>
-            <div className="flex flow-row items-center w-24 h-8 cursor-pointer ">
-              <LogoIcon />
-              <span className="ml-2 hover:text-white duration-200"> Hyeran </span>
+            <div className="flex flow-row items-center w-28 h-8 cursor-pointer ">
+              {/* <LogoIcon /> */}
+              <span className="ml-2 hover:text-white duration-200"> Hyeran Blog </span>
             </div>
           </a>
         </Link>
